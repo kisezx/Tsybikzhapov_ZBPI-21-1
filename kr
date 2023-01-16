@@ -1,0 +1,38 @@
+#Задача 2
+class NumbersModul:
+    default_modul = 11
+
+    def init(self, value):
+        self.value = value
+        self.rest = value % self.default_modul
+
+    def str(self):
+        return f'{type(self).name}, Rest = {self.rest}'
+
+    def add(self, other):
+        return self.value + other.value
+
+    def sub(self, other):
+        return self.value - other.value
+
+    def mul(self, other):
+        return self.value * other.value
+
+    def truediv(self, other):
+        return self.value / other.value
+
+    def eq(self, other):
+        return self.rest == other.rest
+
+
+a = NumbersModul(20)
+
+b = NumbersModul(31)
+
+print(a)
+
+print(a + b)
+print(a - b)
+print(a * b)
+print(a / b)
+print(a == b)
